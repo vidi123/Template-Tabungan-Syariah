@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman dengan Navbar Responsif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Tambahan CSS untuk tampilan mobile */
+      @media (max-width: 768px) {
+        .navbar {
+          display: none;
+        }
+        .mobile-navbar {
+          display: block;
+        }
+      }
+      @media (min-width: 769px) {
+        .navbar {
+          display: block;
+        }
+        .mobile-navbar {
+          display: none;
+        }
+      }
+
+      /* Hilangkan scrollbar pada input type number */
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      /* Form */
+      form input {
+        width: 100%;
+        height: 40px;
+        border-radius: 15px;
+        padding-inline: 12px;
+        padding-block: 6px;
+        color: black;
+        font-size: 15px;
+      }
+      form input::placeholder {
+        color: rgb(44, 44, 44);
+      }
+      form input:focus {
+        outline: none;
+        background-color: rgb(250, 250, 250);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <main
+      class="w-11/12 lg:w-3/5 mx-auto my-4 flex rounded-2xl overflow-hidden"
+    >
+      <form
+        action=""
+        class="w-full lg:w-1/2 bg-[#5773FF] px-8 py-6 text-white text-lg flex flex-col gap-4"
+      >
+        <h1 class="text-4xl font-semibold">Sign Up</h1>
+        <span class="text-lg">Daftarkan diri kamu ke Tabungan Syariah.</span>
+        <div class="flex flex-col gap-5">
+          <input type="number" placeholder="NIK" />
+          <input type="text" placeholder="Nama Panjang" />
+          <input type="email" placeholder="Email" />
+          <input type="number" placeholder="Nomor Telepon" />
+          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Konfirmasi Password" />
+          <select
+            id="countries"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option selected>Pilih Bank</option>
+            <option value="">BCA</option>
+            <option value="">BRI</option>
+            <option value="">BRI</option>
+            <option value="">BSI</option>
+            <option value="">BTN</option>
+            <option value="">CIMB NIAGA</option>
+            <option value="">Mandiri</option>
+            <option value="">OCBC NISP</option>
+            <option value="">Permata</option>
+          </select>
+          <input type="number" placeholder="Nomor Rekening" />
+          <input type="text" placeholder="Kode Referral" />
+          <div class="flex items-center gap-2 text-sm">
+            <input type="checkbox" name="sk" id="sk" class="w-4 h-4" />
+            <label for="sk"
+              >Saya setuju Syarat dan Ketentuan yang berlaku</label
+            >
+          </div>
+          <button
+            type="submit"
+            class="w-[150px] lg:w-[100px] flex px-5 lg:px-4 py-3 lg:py-2 rounded-lg bg-white text-blue-500 font-semibold"
+          >
+            Sing Up
+          </button>
+        </div>
+        <span
+          >Sudah punya akun?
+          <a href="./signin.html" class="underline">Sign In</a>
+        </span>
+      </form>
+      <div class="hidden lg:flex justify-center items-center w-1/2 bg-white">
+        <img src="./assets/signup.png" alt="" class="w-3/4 h-fit" />
+      </div>
+    </main>
+  </body>
+</html>
