@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabungan Syariah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Tambahan CSS untuk tampilan mobile */
+      @media (max-width: 768px) {
+        .navbar {
+          display: none;
+        }
+        .mobile-navbar {
+          display: block;
+        }
+      }
+      @media (min-width: 769px) {
+        .navbar {
+          display: block;
+        }
+        .mobile-navbar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="relative h-[1000vh]">
+    <!-- sidebar -->
+    <div
+      id="sidebar"
+      class="fixed top-0 w-3/4 lg:w-1/4 h-screen bg-black flex -left-96 lg:left-0 z-20"
+    >
+      <div
+        class="w-full h-20 bg-slate-400 flex items-center gap-4 text-lg font-bold px-5"
+      >
+        <img
+          src="./assets/Logo-Tabungan-Syariah.jpeg"
+          alt="Logo"
+          class="w-12 h-12"
+        />
+        <span class="text-green-900">Tabungan Syariah</span>
+        <button class="lg:hidden" id="btn-sidebar-tutup">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav
+      class="w-full lg:w-3/4 h-16 bg-slate-300 fixed top-0 right-0 flex items-center gap-3 px-3 z-10"
+    >
+      <button class="lg:hidden" id="btn-sidebar-buka">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+      <h2 class="text-2xl font-semibold text-green-900">
+        Selamat Datang Admin!
+      </h2>
+    </nav>
+    <main
+      class="absolute top-16 right-0 w-full lg:w-3/4 bg-slate-300 flex flex-col"
+    >
+      <div class="w-full flex flex-col lg:flex-row">
+        <div class="w-full lg:w-2/6 border h-[200px] flex bg-red-600"></div>
+        <div class="w-full lg:w-2/6 border h-[200px] flex bg-red-600"></div>
+        <div class="w-full lg:w-2/6 border h-[200px] flex bg-red-600"></div>
+        <div class="w-full lg:w-2/6 border h-[200px] flex bg-red-600"></div>
+      </div>
+      <div class="w-full flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/2 flex flex-col">
+          <div class="w-full border h-[200px] flex bg-teal-600"></div>
+          <div class="w-full border h-[200px] flex bg-teal-600"></div>
+        </div>
+        <div class="w-full lg:w-1/2 flex flex-col">
+          <div class="w-full border h-[200px] flex bg-blue-600"></div>
+          <div class="w-full border h-[200px] flex bg-blue-600"></div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const btnSidebarBuka = document.querySelector("#btn-sidebar-buka");
+      const btnSidebarTutup = document.querySelector("#btn-sidebar-tutup");
+      const sidebar = document.querySelector("#sidebar");
+      btnSidebarBuka.addEventListener("click", () => {
+        console.log(sidebar.classList);
+        sidebar.classList.forEach((e) => {
+          console.log(e);
+          //   if (e.contains == "-left-96") {
+          //     console.log("gacor");
+          //   }
+          if (e.includes("-left")) {
+            sidebar.classList.remove("-left-96");
+          }
+          console.log(e);
+        });
+        btnSidebarTutup.addEventListener("click", () => {
+          sidebar.classList.add("-left-96");
+        });
+      });
+    </script>
+  </body>
+</html>
