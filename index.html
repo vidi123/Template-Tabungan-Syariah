@@ -32,7 +32,7 @@
       }
     </style>
   </head>
-  <body class="bg-gray-100">
+  <body class="">
     <!-- Navbar Desktop -->
     <nav class="w-full hidden lg:block fixed top-0 bg-white p-4">
       <div class="mx-24 flex justify-between items-center">
@@ -129,10 +129,12 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="p-8 flex flex-col">
+    <main
+      class="bg-gray-100 flex flex-col bg-[url('./assets/hero-bg.png')] bg-fixed bg-no-repeat bg-contain bg-right-top"
+    >
       <!-- Hero -->
       <div
-        class="lg:h-[90vh] flex flex-col-reverse lg:flex-row gap-5 px-4 mt-[100px] lg:mt-0"
+        class="lg:h-[90vh] flex flex-col-reverse lg:flex-row gap-5 px-8 mt-[100px] lg:mt-0"
       >
         <div class="lg:w-1/2 flex flex-col gap-6 justify-center">
           <h1 class="text-5xl text-gray-700 font-semibold">Tabungan Syariah</h1>
@@ -155,7 +157,7 @@
       </div>
       <!-- About -->
       <div
-        class="flex flex-col justify-center gap-8 mt-32 pt-28 lg:pt-36 lg:flex-row"
+        class="w-full bg-white flex flex-col justify-center gap-8 mt-32 pt-28 lg:pt-36 lg:flex-row"
         id="about"
       >
         <img
@@ -183,7 +185,7 @@
       </div>
       <!-- Deposit -->
       <div
-        class="flex flex-col items-center gap-6 text-center mt-32 pt-28 lg:pt-36"
+        class="w-full bg-white flex flex-col items-center gap-6 text-center pt-28 pb-20 lg:pt-36"
       >
         <h2 class="text-gray-700 text-3xl font-semibold">Pendaftaran Mudah</h2>
         <span class="text-gray-700 text-lg font-semibold"
@@ -238,7 +240,7 @@
       </div>
       <!-- Bonus -->
       <div
-        class="flex flex-col items-center gap-6 text-center mt-32 pt-28 lg:pt-36"
+        class="flex flex-col items-center gap-6 text-center mt-32 py-28 lg:pt-36"
         id="contact"
       >
         <h2 class="text-gray-700 text-3xl font-semibold">Bonus Rewards</h2>
