@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
       html {
         scroll-behavior: smooth;
@@ -42,7 +43,7 @@
   </head>
   <body class="">
     <!-- Navbar Desktop -->
-    <nav class="w-full hidden lg:block fixed top-0 bg-white p-4">
+    <nav class="z-20 w-full hidden lg:block fixed top-0 bg-white p-4">
       <div class="mx-24 flex justify-between items-center">
         <a href="#" class="flex items-center gap-4 text-2xl font-bold">
           <img
@@ -76,7 +77,7 @@
     </nav>
 
     <!-- Navbar Mobile -->
-    <nav class="w-full mobile-navbar bg-white p-4 fixed top-0">
+    <nav class="z-20 w-full mobile-navbar bg-white p-4 fixed top-0">
       <div class="container mx-auto flex justify-between items-center">
         <a href="#" class="flex items-center gap-4 text-2xl font-bold">
           <img
@@ -158,6 +159,9 @@
         </div>
         <div class="lg:w-1/2 flex lg:justify-center items-center">
           <img
+            data-aos="flip-down"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="1000"
             src="./assets/Logo-Tabungan-Syariah.jpeg"
             alt="hero"
             class="lg:w-1/2 shadow-lg lg:shadow-2xl"
@@ -173,8 +177,16 @@
           src="https://app.digitalpwer.com/assets/img/about.jpg"
           alt="About"
           class="w-full h-[300px] rounded-xl lg:w-2/5 shadow-xl"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+          data-aos="fade-right"
         />
-        <div class="flex flex-col gap-3 lg:w-2/5">
+        <div
+          class="flex flex-col gap-3 lg:w-2/5"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+          data-aos="fade-left"
+        >
           <h2 class="text-gray-700 text-3xl font-semibold text-center">
             Tentang Kami
           </h2>
@@ -196,7 +208,12 @@
       <div class="flex flex-col gap-5 px-8 pb-12 mt-[100px]">
         <h2 class="text-3xl text-gray-700 font-semibold">Maksud dan Tujuan</h2>
         <ol class="pl-5 font-semibold">
-          <li>
+          <li
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
             <span class="text-lg">Bidang Keagamaan</span>
             <ul class="pl-5 text-gray-700">
               <li>
@@ -209,7 +226,12 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
             <span class="text-lg">Bidang Sosial</span>
             <ul class="pl-5 text-gray-700">
               <li>
@@ -228,7 +250,12 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
             <span class="text-lg">Bidang Kemanusiaan</span>
             <ul class="pl-5 text-gray-700">
               <li>
@@ -252,6 +279,10 @@
       <!-- Deposit -->
       <div
         class="w-full bg-white flex flex-col items-center gap-6 text-center pt-28 pb-20 lg:pt-36"
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
       >
         <h2 class="text-gray-700 text-3xl font-semibold">Pendaftaran Mudah</h2>
         <span class="text-gray-700 text-lg font-semibold"
@@ -316,6 +347,10 @@
         <div class="flex flex-col lg:flex-row gap-5 lg:gap-8">
           <div
             class="w-full lg:w-[250px] px-6 py-12 bg-white flex flex-col items-center gap-3 rounded shadow-xl"
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -338,6 +373,10 @@
           </div>
           <div
             class="w-full lg:w-[250px] px-6 py-12 bg-white flex flex-col items-center gap-3 rounded shadow-xl"
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -365,6 +404,10 @@
           </div>
           <div
             class="w-full lg:w-[250px] px-6 py-12 bg-white flex flex-col items-center gap-3 rounded shadow-xl"
+            data-aos="flip-right"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -389,6 +432,10 @@
           </div>
           <div
             class="w-full lg:w-[250px] px-6 py-12 bg-white flex flex-col items-center gap-3 rounded shadow-xl"
+            data-aos="flip-right"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -497,6 +544,29 @@
             this.classList.remove("text-white");
           }
         });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init", // class applied after initialization
+        animatedClassName: "aos-animate", // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
     </script>
   </body>
 </html>
